@@ -1,28 +1,18 @@
-import logo from "./logo.svg";
-import Weather from "./Weather";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
 import "./App.css";
+import Search from "./Search.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello world</p>
-        <Weather city="Lisbon" />
-        <a
-          aria-label="link to this heading"
-          aria-describedby="introduction"
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noreferrer"
-          // eslint-disable-next-line
-          alt="This is the react logo in green"
-        ></a>
-      </header>
-    </div>
-  );
+export default function App() {
+  return <Search />;
 }
 
-export default App;
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
