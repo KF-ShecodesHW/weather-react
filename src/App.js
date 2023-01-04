@@ -11,6 +11,7 @@ export default function App() {
       <p>
         This React app is
         <a href="https://github.com/KF-ShecodesHW/weather-react">
+          {" "}
           opensourced
         </a>{" "}
         and built by kelly faria.
