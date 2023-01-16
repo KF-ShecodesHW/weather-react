@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+.document {
+  background-color: #59bdb3;
 }
 
 .App-logo {
@@ -35,4 +35,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App {
+  background-color: white;
+  margin: 50px;
+  border-radius: 20px;
+  border: 2px outset;
+  border-color: #dfdfdf;
+  max-width: 700px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.App h1 {
+  font-size: 60px;
+}
+
+.App h2 {
+  font-size: 24px;
+}
+
+.App h3 {
+  font-size: 18px;
+}
+
+.App h4 {
+  font-size: 14px;
+}
+
+.city-country {
+  margin: 36px;
+  padding-top: 60px;
+  color: #440064;
+  line-height: 36px !important;
+}
+.Temperature-image {
+  margin: 36px;
+  text-align: center;
+  color: #440064;
+}
+
+.details {
+  text-align: center;
+  color: #440064;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.temp {
+  padding-top: 24px;
+}
+
+.Detail {
+  background-color: #eee4ff;
+  margin: 36px;
+  border-radius: 15px;
 }

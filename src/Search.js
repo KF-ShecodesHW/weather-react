@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Search.css";
 
 export default function WeatherSearch() {
   let [city, setCity] = useState("");
@@ -19,7 +20,7 @@ export default function WeatherSearch() {
       <div className="list-weather">
         <ul>
           <li>Temperature:{response.data.main.temp} </li>
-          <li>Description: {response.data.weather.decription}</li>
+          <li>Description:{response.data.weather.decription}</li>
           <li>Humidity: {response.data.main.humidity}%</li>
           <li>Wind: {response.data.wind.speed}</li>
           <li>
@@ -39,10 +40,22 @@ export default function WeatherSearch() {
 
   return (
     <div className="WeatherSearch">
-      <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Type a city" onChange={changeCity} />
-        <input type="submit" value="Search" />
+      <form onSubmit={handleSubmit} className="mb-3">
+        <div className="row">
+          <div className="col-6">
+            <input
+              type="search"
+              placeholder="🔍  Enter a City"
+              onChange={changeCity}
+            />
+          </div>
+
+          <div className="col-2">
+            <input type="submit" value="Search" className="btn btn-primary" />
+          </div>
+        </div>
       </form>
+
       <h2>{temperature}</h2>
     </div>
   );
