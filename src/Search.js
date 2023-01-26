@@ -9,8 +9,9 @@ export default function WeatherSearch() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    let apiKey = "31ea9bb1c8fa46f0f01oce03ca4a3b2t";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiKey = "9b4aa1e9d9995bf996aaf55cc902b1e5";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showTemperature);
   }
 
